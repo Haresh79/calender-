@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style type="text/css">
+.calender{ position:relative;}
+.head{background-color:#77bff2; height:50px; width:90%;
+margin:auto; position:absolute; top:20%; left:5%; display:grid;
+grid-template-columns:1fr 1fr; }
+.body{background-color:#d3dce3; height:200px; width:100%;
+margin:auto; position:absolute; top:100%; left:; display:grid;
+grid-template-rows:1fr 1fr; border-radius:0 0 15px 15px; 
+box-shadow: rgb(115,117,116,0.5) 3px 3px 6px 0px inset;}
+
+#m{margin-left:30%; margin-top:10px; font-size:30px;
+font-weight:bold;}
+#y{margin-left:30%; margin-top:10px; font-size:30px;
+font-weight:bold;}
+#date{margin-left:42%; margin-top:30px; font-size:70px;
+font-style:oblique; }
+#day{margin-left:39%; font-size:30px;}
+</style>
+</head>
+<body bgcolor="#21201e">
+<div class="calender">
+<div class="head">
+<div id="m">Jan</div>
+<div id="y"></div>
+<div class="body">
+<div id="date">7</div>
+<div id="day">Fri</div>
+</div>
+</div>
+<script type="text/javascript">
+const d= new Date();
+const month=["January","February","March","April","May",
+"June","July","August","September","October","November","December"];
+const day=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+const y=d.getFullYear();
+const m=d.getMonth();
+const dy=d.getDay();
+const date=d.getDate()
+
+document.getElementById('m').innerHTML=`${month[m]}`;
+document.getElementById('y').innerHTML= y;
+document.getElementById('date').innerHTML=date;
+document.getElementById('day').innerHTML=`${day[dy]}`;
+
+</script>
+</body>
+</html>
